@@ -52,7 +52,7 @@ def main():
 
         pixeldata[1:DIMX, 1:DIMY, 0] = np.clip(u[0, 1:DIMX, 1:DIMY] + 128, 0, 255)
         pixeldata[1:DIMX, 1:DIMY, 1] = np.clip(u[1, 1:DIMX, 1:DIMY] + 128, 0, 255)
-        pixeldata[1:DIMX, 1:DIMY, 1] = np.clip(u[1, 1:DIMX, 1:DIMY] + 128, 0, 255)
+        pixeldata[1:DIMX, 1:DIMY, 2] = np.clip(u[2, 1:DIMX, 1:DIMY] + 128, 0, 255)
 
         surf = pygame.surfarray.make_surface(pixeldata)
         display.blit(pygame.transform.scale(surf, (DIMX*CELLSIZE, DIMY*CELLSIZE)), (0,0))
